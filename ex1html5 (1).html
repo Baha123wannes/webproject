@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Ex1
+    </title>
+    <script type="text/javascript" src="ex1html5.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <meta utf-8 />
+  </head>
+
+  <body>
+    <form>
+      <h1>Contact</h1>
+      <p>Be called back for more information</p>
+      First Name(*)<input
+        type="text"
+        placeholder="Name"
+        required="required"
+        oninput="sessionStorage.setItem('username',this.value);"
+        name="First Name"
+      /><br />
+      Last Name(*)<input
+        type="text"
+        name="Last Name"
+        required="required"
+      /><br />
+      You want to be conntactedby
+      <select>
+        <option>Phone </option
+        ><option>Fax </option
+        ><option>Email </option></select
+      ><br />
+      Your phone<input type="tel" name="phone_num" /><br />
+      When(*)<input type="date" name="date" required="required" /><br />
+      Between(*)<input type="time" name="time" required="required" />and<input
+        type="time"
+        name="time"
+        required="required"
+      /><br />
+      <button type="cancel" name="Cancel" value="Cancel">Cancel</button>
+      <input type="submit" name="save" value="Save" />
+    </form>
+    <div id="google_canvas"></div>
+  </body>
+</html>

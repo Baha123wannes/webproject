@@ -1,0 +1,44 @@
+<html>
+<head><title>Exercice 5</title>
+<script language ="JavaScript">
+function verif(frm)
+{ if(frm.nom.value == "") { alert("Veuillez taper votre nom et prénom!"); return false; };
+ if(frm.cin.value == "") { alert("Veuillez taper votre CIN!"); return false; };
+ var a = 1;
+ var taille =frm.cin.value.length;
+ for(i=0;i<taille;++i)
+ {if(frm.cin.value.charAt(i) < "0" || frm.cin.value.charAt(i) > "9" || taille!=8) a = -1;}
+ if(a == -1) {alert("Le numéro de votre CIN est incorrect!"); return false; }
+ if(frm.email.value == "") { alert("Veuillez entrer votre adresse e-mail!"); return false; }
+ if(frm.email.value.indexOf('@') == -1) { alert("Adresse e-mail incorrecte!"); return false; }
+ taille=frm.list.options.length;
+ var b=0;
+ for(i=0;i<taille;i++){if (frm.list[i].selected){b+=1};}
+ if (b==0) {alert("Veuillez choisir un module de formation!"); return false;}
+ if (b>2) {alert("Veuillez sélectionner au maximum 2 choix!");return false;}
+}
+</script>
+</head>
+<body bgcolor="#FFCCCC">
+<h2 align="center"><u>INSCRIPTION</u></h2><br>
+<form name="f" action="sauvegarder.html" method="post" onSubmit="return verif(f)">
+<pre>
+Nom et Prénom * : <input type="text" size="30" name="nom"> <br><br>
+ CIN * : <input type="text" size="10" name="cin"><br><br>
+Adresse e-mail * : <input type="text" size="30" name="email"> <br><br>
+ Niveau :
+ <input type="radio" name="r" checked value="1"> Secondaire <input type="radio"
+name="r" value="2"> Universitaire <input type="radio" name="r" value="3"> Autre<br><br>
+Modules de formation :<br>
+ <SELECT name="list" multiple size="3" >
+ <OPTION VALUE="Bureautique" >Bureautique</OPTION>
+ <OPTION VALUE="SE et Réseaux info.">SE et Réseaux info.</OPTION>
+ <OPTION VALUE="TIC">TIC</OPTION>
+ <OPTION VALUE="Programmation">Programmation</OPTION>
+ </SELECT><br><br>
+ (*) Champs obligatoire
+ <input type="submit" value="Envoyer"> <input type="reset" value="Annuler">
+</pre>
+</form>
+</body>
+</html>

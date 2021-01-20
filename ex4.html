@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice 4</title>
+	<script type="text/javascript">
+		function resl(frm)
+		{
+			var f=frm.formule.value;
+			var re=eval(f);
+			frm.resultat.value=re;
+		}
+	</script>
+</head>
+<body>
+	<form>
+	<input type="text" name="formule">
+	<input type="button" value="=" onclick="resl(this.form)">
+	<input type="text" name="resultat">
+	<a href="#" onclick="resl(this.form)">Resultat</a>
+	</form>
+</body>
+</html>

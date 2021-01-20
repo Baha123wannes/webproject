@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice 2</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="number"  name="note1">
+	<input type="number"   name="coef1">
+	<br>
+	<input type="number"  name="note2">
+	<input type="number"  name="coef2">
+	<br>
+	<input type="number"   name="note3">
+	<input type="number"   name="coef3">
+	<br>
+	<button id="b1">moyenne</button>
+	<script>
+		let eve=document.getElementById('b1');
+		eve.addEventListener('click',moyen);
+		function moyen(){
+		let not1=document.getElementsByName("note1");
+		let not2=document.getElementsByName("note2");
+		let not3=document.getElementsByName("note3");
+		let co1=document.getElementsByName("coef1");
+		let co2=document.getElementsByName("coef2");
+		let co3=document.getElementsByName("coef3");
+		let somme1=not1+not2+not3;
+		let somme2=co1+co2+co3;
+		let moy=somme1/somme2;
+		document.write("moy",moy);
+		}
+	</script>
+</body>
+</html>

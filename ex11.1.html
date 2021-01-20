@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice 11.1</title>
+</head>
+<body>
+	<div id="divTP1">
+Le <strong>World Wide Web Consortium</strong>, abrégé par le sigle <strong>W3C</strong>, est un
+<a href="http://fr.wikipedia.org/wiki/Organisme_de_normalisation" title="Organisme de
+normalisation">organisme de standardisation</a> à but non-lucratif chargé de promouvoir la
+compatibilité des technologies du <a href="http://fr.wikipedia.org/wiki/World_Wide_Web" title="World
+Wide Web">World Wide Web</a>.
+</div>
+	<script type="text/JavaScript">
+		var mainDiv = document.createElement('div');
+    		mainDiv.id = 'divTP1';
+		var w3cStrong1 = document.createElement('strong');
+		var w3cStrong2 = document.createElement('strong');
+    		w3cStrong1.innerHTML = 'World Wide Web Consortium';
+    		w3cStrong2.innerHTML = 'W3C';
+		var orgLink = document.createElement('a');
+    		orgLink.href  = 'http://fr.wikipedia.org/wiki/Organisme_de_normalisation';
+    		orgLink.title = 'Organisme de normalisation';
+    		orgLink.innerHTML = 'organisme de standardisation';
+		var wwwLink = document.createElement('a');
+    		wwwLink.href  = 'http://fr.wikipedia.org/wiki/World_Wide_Web';
+    		wwwLink.title = 'World Wide Web';
+    		wwwLink.innerHTML = 'World Wide Web';
+		mainDiv.innerHTML = 'Le ';
+		mainDiv.appendChild(w3cStrong1);
+		mainDiv.innerHTML += ', abrégé par le sigle ';
+		mainDiv.appendChild(w3cStrong2);
+		mainDiv.innerHTML += ', est un ';
+		mainDiv.appendChild(orgLink);
+		mainDiv.innerHTML += ' à but non-lucratif chargé de promouvoir la compatibilité des technologies du ';
+		mainDiv.appendChild(wwwLink);
+		mainDiv.innerHTML += '.';
+		document.getElementById('output').appendChild(mainDiv);
+	</script>
+
+</body>
+</html>

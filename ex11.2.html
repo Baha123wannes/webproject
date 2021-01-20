@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice11.2</title>
+</head>
+<body>
+<div id="divTP2">
+	<p>Langages basés sur ECMAScript :</p>
+		<ul> <li>JavaScript</li>
+			 <li>JScript</li>
+			 <li>ActionScript</li>
+			 <li>EX4</li> 
+		</ul> 
+</div>
+<script type="text/javascript">
+var mainDiv = document.createElement('div');
+    mainDiv.id = 'divTP2';
+var languages = [
+    document.createTextNode('JavaScript'),
+    document.createTextNode('JScript'),
+    document.createTextNode('ActionScript'),
+    document.createTextNode('EX4')
+];
+var paragraph     = document.createElement('p');
+var paragraphText = document.createTextNode('Langages basés sur ECMAScript :');
+paragraph.appendChild(paragraphText);
+var uList = document.createElement('ul'),
+    uItem;
+for (var i = 0, c=languages.length; i < c; i++) {
+    uItem = document.createElement('li');
+	
+    uItem.appendChild(languages[i]);
+    uList.appendChild(uItem);
+}
+mainDiv.appendChild(paragraph);
+mainDiv.appendChild(uList);
+document.getElementById('output').appendChild(mainDiv);
+</script>
+</body>
+</html>

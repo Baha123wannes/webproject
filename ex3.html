@@ -1,0 +1,16 @@
+<html>
+<head><title>Exercice 3</title></head>
+<body>
+<script language="JavaScript">
+mois=Number(prompt("Entrez le numero du mois",""));
+annee=Number(prompt("Entrez le numero de l’année",""));
+switch(mois)
+{
+case 1 : case 3 : case 5 : case 7 : case 8 : case 10 : case 12: nbr_j=31; break;
+case 4 : case 6 : case 9 : case 11 : nbr_j=30; break;
+case 2 : if (annee%4==0) nbr_j=29; else nbr_j=28; break;
+}
+alert("Le nombre de jours est : "+ nbr_j);
+</script>
+</body>
+</html>
